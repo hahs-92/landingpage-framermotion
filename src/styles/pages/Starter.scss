@@ -24,6 +24,7 @@
 
             .button-container {
                 display: flex;
+                margin-top: 2rem;
 
                 button {
                     margin-right: 1rem;
@@ -37,5 +38,61 @@
                 height: 35rem;
             }
         }
+    }
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .main-container {
+        .container {
+            grid-template-columns: 1fr;
+            .content {
+                margin-right: 0;
+                h1 {
+                font-size: 4rem;
+                }
+                p {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                }
+            }
+            .image {
+                margin-left: 2rem;
+                img {
+                height: 25rem;
+                width: 25rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+      font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .main-container {
+      padding-bottom: 3rem;
+      .container {
+        .content {
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1rem;
+            line-height: 1.4rem;
+          }
+        }
+        .image {
+          img {
+            height: 30rem;
+            width: 30rem;
+          }
+        }
+      }
     }
 }

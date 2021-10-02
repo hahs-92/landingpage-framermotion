@@ -4,6 +4,7 @@ import WorkImage from '../assets/work.svg'
 import '../styles/pages/Starter.scss'
 //components
 import Button from '../components/Button'
+import NavBar from '../components/NavBar'
 //icons
 import { GoPlay } from 'react-icons/go'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
@@ -12,6 +13,9 @@ import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 const Starter = () => {
     return(
         <div className='main-container'>
+
+            <NavBar />
+
             <section className="container">
                 <div className='content'>
                     <h1>We Provide Solutions to Help You to Build or Grow Your Business!</h1>
@@ -26,7 +30,7 @@ const Starter = () => {
                 </div>
 
                 <div className="image">
-                    <img src={ WorkImage } alt="Work-image" />
+                    <img src={ WorkImage } alt="Work-imagen" />
                 </div>
 
             </section>
