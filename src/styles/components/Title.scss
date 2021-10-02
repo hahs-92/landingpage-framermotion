@@ -1,0 +1,32 @@
+@import '../utils/colors.scss';
+
+.title {
+    margin-bottom: 2rem;
+
+    h2 {
+        margin-bottom: 0.7rem;
+        font-size: xx-large;
+        color: $headingColor;
+    }
+
+    section {
+        height: 0.3rem;
+        width: 3rem;
+        border-radius: 0.1rem;
+    }
+
+    section .blue {
+        background-color: $headingColor;
+    }
+
+    section .pink {
+        background-color: $pinkColor;
+    }
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

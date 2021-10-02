@@ -1,0 +1,33 @@
+@import '../utils/colors.scss';
+
+.about-container {
+    background-color: $backgroundOtherColor;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin: 0 10%;
+        padding: 5rem 0;
+
+        .details {
+            p {
+                width: 90%;
+                font-size: large;
+                text-align: justify;
+                color: $lightFontColor;
+                line-height: 1.3rem;
+            }
+
+            button {
+                margin-top: 3rem;
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+    }
+}
