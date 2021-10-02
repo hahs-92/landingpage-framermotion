@@ -1,0 +1,86 @@
+@import '../utils/colors.scss';
+
+.why-container {
+    min-height: 50vh;
+
+    .container {
+        margin:  0 10%;
+        padding: 5rem 0;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .title {
+                margin-bottom: 1rem;
+            }
+
+            .subTitle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    width: 65%;
+                    text-align: center;
+                    color: $lightFontColor;
+                }
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 2rem;
+            margin-top: 1rem;
+
+            .reasons {
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                ul {
+                    width: 80%;
+                    list-style-type: none;
+
+                    li {
+                        position: relative;
+                        margin-top: 1.5rem;
+                        padding-left: 45px;
+                        color: $lightFontColor;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: 0;
+                            width: 24px;
+                            height: 24px;
+                            background: url('../../assets/check-circle.svg') no-repeat;
+
+                        }
+                    }
+                }
+            }
+
+            .video {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 18rem;
+                width: 100%;
+                background: url('../../assets/videoImage.jpg');
+                background-size: cover;
+                border-radius: 1rem;
+
+                svg {
+                    color: white;
+                    font-size: 7rem;
+                }
+
+            }
+        }
+    }
+}
