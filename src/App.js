@@ -2,15 +2,17 @@
 import Starter from "./pages/Starter";
 import About from "./pages/About";
 import Why from "./pages/Why";
+import Testimonials from "./pages/Testimonials";
 
 
 function App() {
   return (
-    <div >
+    <main >
       <Starter />
       <About />
       <Why />
-    </div>
+      <Testimonials />
+    </main>
   );
 }
 
