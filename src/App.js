@@ -11,11 +11,11 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <main >
-      <ScrollToTop />
+      {/* <ScrollToTop />
       <Starter />
-      <About />
-      {/* <Why />
-      <Testimonials />
+      <About /> */}
+      <Why />
+      {/* <Testimonials />
       <Blogs />
       <Footer /> */}
     </main>
