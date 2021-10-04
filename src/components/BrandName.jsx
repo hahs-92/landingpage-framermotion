@@ -1,9 +1,9 @@
 //STYLES
 import '../styles/components/BrandName.scss'
 
-const BrandName = () => {
+const BrandName = ({isFooter= false}) => {
     return(
-        <div className='brand'>
+        <div className={`brand ${!!isFooter && 'footer'}`}>
             <span>cryo</span>
         </div>
     )
