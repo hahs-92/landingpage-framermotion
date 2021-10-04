@@ -15,8 +15,8 @@ function App() {
       <Starter />
       <About /> */}
       {/* <Why /> */}
-      <Testimonials />
-      {/* <Blogs /> */}
+      {/* <Testimonials /> */}
+      <Blogs />
       {/* <Footer /> */}
     </main>
   );

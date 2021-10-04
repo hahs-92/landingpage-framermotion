@@ -20,15 +20,16 @@
             }
 
             p {
+                font-size: 1.6rem;
                 color: $lightFontColor;
             }
         }
 
         .blogs {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
-            margin-bottom: 2rem;
+            // grid-template-columns: repeat(3, 1fr);
+            gap: 4rem 0;
+            margin: 2rem 0;
         }
 
         .button-container {
@@ -39,40 +40,22 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 767px) {
   .blogs-container {
         .container {
-
-            .title-container {
-                p {
-                    font-size: 1.8rem;
-                }
-            }
-
             .blogs {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
             }
         }
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .blogs-container {
-        .container {
-            .title-container {
-                p {
-                    font-size: 1.8rem;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 1043px) {
   .blogs-container {
         .container {
             .blogs {
-                gap: 1rem;
+                grid-template-columns: repeat(3, 1fr);
             }
         }
     }
