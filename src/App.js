@@ -16,8 +16,8 @@ function App() {
       <About /> */}
       {/* <Why /> */}
       {/* <Testimonials /> */}
-      <Blogs />
-      {/* <Footer /> */}
+      {/* <Blogs /> */}
+      <Footer />
     </main>
   );
 }
