@@ -13,8 +13,8 @@ function App() {
     <main >
       <ScrollToTop />
       <Starter />
-      {/* <About />
-      <Why />
+      <About />
+      {/* <Why />
       <Testimonials />
       <Blogs />
       <Footer /> */}

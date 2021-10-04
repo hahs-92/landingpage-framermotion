@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    height: 8rem;
-    width: 15rem;
+    height: 12rem;
+    width: 100%;
     border: none;
     border-radius: 0.4rem;
     background-color: white;
@@ -22,7 +22,7 @@
 
         svg {
             color: #f32a8f;
-            font-size: 2rem;
+            font-size: 5rem;
         }
     }
 
@@ -36,51 +36,4 @@
         box-shadow: #f32a8f2f 5px 5px,  #f32a8f1e 10px 10px, #f32a8f02 15px 15px
     }
 
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    .card {
-        padding: 3rem 3.5rem;
-        height: 12rem;
-        // width: 65vw;
-        width: 100%;
-
-        .logo {
-            height: 5rem;
-            width: 5rem;
-
-            svg {
-                font-size: 3rem;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .card {
-        // padding: 3rem 3.5rem;
-        height: 8rem;
-        // width: 13vw;
-
-        .logo {
-            height: 4rem;
-            width: 4rem;
-
-            svg {
-                font-size: 2rem;
-            }
-        }
-        .card-title {
-            margin-bottom: 1rem;
-            font-size: small;
-            color: rgb(18, 18, 88);
-        }
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .card {
-        height: 8rem;
-        width: 13rem;
-    }
 }
