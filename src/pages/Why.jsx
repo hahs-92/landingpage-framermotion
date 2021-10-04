@@ -7,7 +7,7 @@ import { GoPlay } from 'react-icons/go'
 
 const Why = () => {
     return(
-        <section className='why-container' >
+        <section className='why-container' id='services'>
             <div className="container">
                 <section className='top'>
                     <Title title='Why CRYO?' color='pink' LineCenter={true} />

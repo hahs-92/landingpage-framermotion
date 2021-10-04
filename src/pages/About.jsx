@@ -12,7 +12,7 @@ import { SiGooglemessages } from 'react-icons/si'
 
 const About = () => {
     return (
-        <section className='about-container'>
+        <section className='about-container' id='about'>
             <div className='container'>
                 <section className='details'>
                     <Title title='About CRYO' color='blue' />

@@ -6,7 +6,7 @@ import Testimonial from '../components/Testimonial'
 
 const Testimonials = () => {
     return(
-        <section className='testimonials-container'>
+        <section className='testimonials-container' id='testimonials'>
             <div className='container'>
                 <section className='title-container'>
                     <Title title='Testimonials' color='blue' LineCenter={true} />

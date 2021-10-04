@@ -6,7 +6,20 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    max-width: 100vw;
+    max-width: 100vw !important;
     font-family: 'Raleway', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(18, 18, 88);
 }

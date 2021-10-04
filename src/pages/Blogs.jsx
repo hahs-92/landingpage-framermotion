@@ -11,7 +11,7 @@ import Blog from '../components/Blog'
 
 const Blogs = () => {
     return(
-        <section className='blogs-container'>
+        <section className='blogs-container' id='blog'>
             <div className='container'>
                 <section className='title-container'>
                     <Title title='Blogs' color='pink' LineCenter={ true } />
