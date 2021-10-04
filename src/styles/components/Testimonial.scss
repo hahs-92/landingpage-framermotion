@@ -18,7 +18,7 @@
 
         span {
             position: absolute;
-            font-size: 5rem;
+            font-size: 2rem;
             color: #f32a8f8f;
         }
     }
@@ -47,41 +47,6 @@
 
         .designation {
             font-size: medium;
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    .testimonial-container {
-        .content {
-            font-size: 1.3rem;
-        }
-
-        .author {
-            .name {
-                font-size: large;
-            }
-
-            .designation {
-                font-size: 1.4rem;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .testimonial-container {
-        .content {
-            font-size: 1.2rem;
-        }
-
-        .author {
-            .name {
-                font-size: medium;
-            }
-            .designation {
-                font-size: 1.4rem;
-            }
         }
     }
 }

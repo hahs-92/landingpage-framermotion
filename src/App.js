@@ -14,10 +14,10 @@ function App() {
       {/* <ScrollToTop />
       <Starter />
       <About /> */}
-      <Why />
-      {/* <Testimonials />
-      <Blogs />
-      <Footer /> */}
+      {/* <Why /> */}
+      <Testimonials />
+      {/* <Blogs /> */}
+      {/* <Footer /> */}
     </main>
   );
 }
