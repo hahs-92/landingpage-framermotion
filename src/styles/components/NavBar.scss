@@ -2,31 +2,35 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
+    flex-direction: column;
+    justify-content: flex-start;
 
     .col {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 120px;
 
         .collapsable-button {
-            display: none;
+            display: block;
+            font-size: 4rem;
         }
     }
 
     nav {
+        display: none;
         .links {
             ul {
                 display: flex;
-                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
                 justify-content: center;
-                margin: 0.3rem 2rem;
+                margin: 0.3rem 0;
                 list-style-type: none;
                 color: $lightFontColor;
 
                 li {
-                    margin: 0 1rem;
+                    margin: 2rem 1rem 0 1rem;
                     text-transform: uppercase;
 
                     a {
@@ -52,43 +56,45 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
-    .navbar.active {
-        nav{
-            display: block;
-        }
+.navbar.active {
+    nav{
+        display: block;
     }
+}
+
+
+@media screen and (min-width: 1024px) {
 
     .navbar {
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2rem 0;
 
         .col {
             .collapsable-button {
-                display: block;
-                font-size: 4rem;
+                display: none;
             }
         }
 
         nav {
-            display: none;
+            display: block;
 
             .links {
                 ul {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    margin: 0.3rem 0;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
 
                     li {
-                        margin-top: 2rem;
+                        margin-bottom: 2rem;
 
-                        &:first-of-type {
-                            margin-top: 4rem;
-                        }
+                        // &:first-of-type {
+                        //     margin-top: 4rem;
+                        // }
 
-                        a {
-                            font-size: x-large;
-                        }
+                        // a {
+                        //     font-size: x-large;
+                        // }
                     }
                 }
             }

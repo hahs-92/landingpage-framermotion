@@ -1,98 +1,60 @@
 @import "../utils/colors.scss";
 
 .main-container {
-    margin: 0 10%;
+  margin: 0 10%;
 
-    .container {
+  .container {
+    display: grid;
+    .content {
+      margin-top: 3.4rem;
+
+      h1 {
+        font-size: 3rem;
+        color: $headingColor;
+      }
+
+      p {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: $lightFontColor;
+      }
+
+      .button-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        gap: 0 1rem;
+        margin-top: 2rem;
 
-        .content {
-            margin-top: 3.4rem;
-            margin-right: 3rem;
+      }
+    }
 
-            h1 {
-                font-size: 3rem;
-                color: $headingColor;
-            }
-
-            p {
-                font-size: 1.4rem;
-                color: $lightFontColor;
-                line-height: 1.9rem;
-            }
-
-            .button-container {
-                display: flex;
-                margin-top: 2rem;
-
-                button {
-                    margin-right: 1rem;
-                }
-            }
-        }
-
-        .image {
-            img {
-                width: 35rem;
-                height: 35rem;
-            }
+    .image {
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
         }
     }
+  }
 }
 
 
+@media screen and (min-width: 1024px) {
+  .main-container {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 1rem;
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    .main-container {
-        .container {
-            grid-template-columns: 1fr;
-            .content {
-                margin-right: 0;
-                h1 {
-                font-size: 4rem;
-                }
-                p {
-                font-size: 2rem;
-                line-height: 2.5rem;
-                }
-            }
-            .image {
-                margin-left: 2rem;
-                img {
-                height: 25rem;
-                width: 25rem;
-                }
-            }
-        }
-    }
-}
+      .content {
+        h1 {
+            font-size: 3.2rem;
+          }
 
-@media screen and (max-width: 768px) {
-    html {
-      font-size: 8px;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .main-container {
-      padding-bottom: 3rem;
-      .container {
-        .content {
-          h1 {
-            font-size: 2rem;
-          }
-          p {
-            font-size: 1rem;
-            line-height: 1.4rem;
-          }
-        }
-        .image {
-          img {
-            height: 30rem;
-            width: 30rem;
-          }
+        p {
+          font-size: 1.9rem;
+          line-height: 2rem;
         }
       }
     }
+  }
 }
