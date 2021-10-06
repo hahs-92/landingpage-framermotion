@@ -1,30 +1,59 @@
+import { motion } from 'framer-motion'
 //STYLES
 import '../styles/pages/Why.scss'
 //COMPONENTS
 import Title from '../components/Title'
 //ICONS
 import { GoPlay } from 'react-icons/go'
+//ANIAMTIONS
+import {
+    topContainerAnimation,
+    videoAnimation,
+    reasonsAniamtion
+} from '../helpers/animations'
+import { useScroll } from '../hooks/useScroll'
 
 const Why = () => {
+
+    const [ element, controls ] = useScroll()
+
     return(
-        <section className='why-container' id='services'>
+        <section className='why-container' id='services' ref={element}>
             <div className="container">
-                <section className='top'>
+                <motion.section className='top'
+                    variants={topContainerAnimation}
+                    animate={controls}
+                    transition={{duration: 1}}
+                >
                     <Title title='Why CRYO?' color='pink' LineCenter={true} />
 
                     <div className="subTitle">
                         <p>Always stay update with the technologies thus we help our clients by giving the best solutions for their nedds</p>
                     </div>
-                </section>
+                </motion.section>
 
                 <section className='content'>
-                    <div className=''>
+                    <motion.div className=''
+                        variants={videoAnimation}
+                        animate={controls}
+                        transition={{
+                            type: "tween",
+                            duration: 0.5
+                        }}
+                    >
                         <section className='video'>
                             <GoPlay />
                         </section>
-                    </div>
+                    </motion.div>
 
-                    <div className='reasons'>
+                    <motion.div className='reasons'
+                        variants={reasonsAniamtion}
+                        animate={controls}
+                        transition={{
+                            type:"tween",
+                            duration:0.5
+                        }}
+                    >
                         <ul>
                             <li>Over 10+ years of industry wide expierence</li>
 
@@ -36,7 +65,7 @@ const Why = () => {
 
                             <li>Ready to recieve service request 24</li>
                         </ul>
-                    </div>
+                    </motion.div>
                 </section>
             </div>
         </section>

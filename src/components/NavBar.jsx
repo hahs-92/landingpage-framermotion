@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { motion } from 'framer-motion'
 //COMPONENTS
 import Button from "./Button"
 import BrandName from './BrandName'
@@ -7,6 +8,8 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdClose } from 'react-icons/md'
 //STYLES
 import '../styles/components/NavBar.scss'
+//ANIMATIONS
+import { navbarAniamtion } from '../helpers/animations'
 
 const NavBar = () => {
 
@@ -17,7 +20,10 @@ const NavBar = () => {
     }
 
     return(
-        <div className={ `navbar ${ !!toggleNavbar && 'active'}`}>
+        <motion.div className={ `navbar ${ !!toggleNavbar && 'active'}`}
+            variants={ navbarAniamtion }
+            transition={{ delay: 0.1, ease:"easeInOut" }}
+        >
             <section className='col'>
 
                 <BrandName />
@@ -52,7 +58,7 @@ const NavBar = () => {
                     </ul>
                 </section>
             </nav>
-        </div>
+        </motion.div>
     )
 }
 

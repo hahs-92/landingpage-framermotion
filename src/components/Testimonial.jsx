@@ -1,9 +1,19 @@
+import { motion } from 'framer-motion'
 //STYLES
 import '../styles/components/Testimonial.scss'
 
-const Testimonial = ({ content, name, designation }) => {
+const Testimonial = ({
+    content,
+    name,
+    designation,
+    variants,
+    animate
+}) => {
     return(
-        <article className='testimonial-container' >
+        <motion.article className='testimonial-container'
+            variants={variants}
+            animate={animate}
+        >
             <section className='quote'>
                 <span>&#10077;</span>
             </section>
@@ -21,7 +31,7 @@ const Testimonial = ({ content, name, designation }) => {
                     { designation}
                 </div>
             </section>
-        </article>
+        </motion.article>
     )
 }
 

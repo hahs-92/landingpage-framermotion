@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 //STYLES
 import '../styles/pages/Footer.scss'
 //COMPONENTS
@@ -7,13 +8,24 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
 import { AiFillInstagram, AiFillLinkedin, AiOutlineSend } from "react-icons/ai";
+//ANIMATION
+import { fromDown, fromUp } from '../helpers/animations'
+//HOOKS
+import { useScroll } from '../hooks/useScroll';
 
 const Footer = () => {
+
+    const [ element, controls] = useScroll()
+
     return(
-        <footer className='footer-container'>
+        <footer className='footer-container' ref={element}>
             <div className='container'>
                 <div className='main-container'>
-                    <section className="news-letter">
+                    <motion.section className="news-letter"
+                        variants={fromUp}
+                        animate={controls}
+                        transition= {{duration: 0.5}}
+                    >
                         <BrandName isFooter={ true } />
 
                         <p>Join our newsletter to get updated with our Offers & Discounts.</p>
@@ -25,9 +37,13 @@ const Footer = () => {
                                 <AiOutlineSend />
                             </button>
                         </section>
-                    </section>
+                    </motion.section>
 
-                    <section className='quick-links'>
+                    <motion.section className='quick-links'
+                        variants={fromDown}
+                        animate={controls}
+                        transition= {{duration: 0.5}}
+                    >
                         <h3>Quick Links</h3>
 
                         <ul>
@@ -56,9 +72,13 @@ const Footer = () => {
                                 <a href="#">Privacy Policy</a>
                             </li>
                         </ul>
-                    </section>
+                    </motion.section>
 
-                    <section className='industries'>
+                    <motion.section className='industries'
+                        variants={fromUp}
+                        animate={controls}
+                        transition= {{duration: 0.5}}
+                    >
                         <h3>Industires</h3>
 
                         <ul>
@@ -84,9 +104,13 @@ const Footer = () => {
                                 <a href="#">IOS App Development</a>
                             </li>
                         </ul>
-                    </section>
+                    </motion.section>
 
-                    <section className='touch'>
+                    <motion.section className='touch'
+                        variants={fromDown}
+                        animate={controls}
+                        transition= {{duration: 0.5}}
+                    >
                         <h3>Get in Touch</h3>
 
                         <div className="touch-section">
@@ -129,7 +153,7 @@ const Footer = () => {
                             </section>
                         </div>
 
-                    </section>
+                    </motion.section>
 
                 </div>
 

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 //STYLES
 import '../styles/components/Blog.scss'
 //COMPONENTS
@@ -5,8 +6,17 @@ import Button from './Button'
 //ICONS
 import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
-const Blog = ({image, title, subTitle}) => (
-    <article className='blog-container'>
+const Blog = ({
+    image,
+    title,
+    subTitle,
+    animate,
+    variants
+}) => (
+    <motion.article className='blog-container'
+        variants={variants}
+        animate={animate}
+    >
         <section className='image'>
             <img src={image} alt="Blog" />
         </section>
@@ -22,7 +32,7 @@ const Blog = ({image, title, subTitle}) => (
 
             <Button content='Read More' color='inverse' Icon={<HiOutlineArrowNarrowRight />} />
         </section>
-    </article>
+    </motion.article>
 )
 
 export default Blog

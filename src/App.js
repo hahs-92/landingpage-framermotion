@@ -7,18 +7,21 @@ import Blogs from "./pages/Blogs";
 import Footer from "./pages/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
+//ANIMATIONS
+import { motion } from 'framer-motion'
+
 
 function App() {
   return (
-    <main >
-      {/* <ScrollToTop />
+    <motion.main initial='hidden' animate='show'>
+      <ScrollToTop />
       <Starter />
-      <About /> */}
-      {/* <Why /> */}
-      {/* <Testimonials /> */}
-      {/* <Blogs /> */}
+      <About />
+      <Why />
+      <Testimonials />
+      <Blogs />
       <Footer />
-    </main>
+    </motion.main>
   );
 }
 
